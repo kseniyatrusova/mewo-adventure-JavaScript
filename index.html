@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>MEWO ADVENTURE</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <header>
+      <h1>MEWO ADVENTURE</h1>
+      <div id="hud">
+        <span id="flowers">ЦВЕТЫ: 0/5</span>
+        <span id="timer">ВРЕМЯ: 0.0</span>
+        <span id="best">РЕКОРД: --</span>
+        <span id="status">ГОТОВ</span>
+      </div>
+    </header>
+
+    <div id="canvas-wrap">
+      <canvas id="gameCanvas" width="1280" height="640"></canvas>
+    </div>
+
+    <div id="controls-hint">
+      <p>← → / A D — ХОДЬБА &nbsp;|&nbsp; SPACE / W — ПРЫЖОК</p>
+    </div>
+
+    <div id="mobile-controls">
+      <button id="btn-left" class="mobile-btn">◀</button>
+      <button id="btn-right" class="mobile-btn">▶</button>
+      <button id="btn-jump" class="mobile-btn jump">▲</button>
+    </div>
+
+    <div id="buttons">
+      <button id="btn-start">СТАРТ</button>
+      <button id="btn-pause" disabled>ПАУЗА</button>
+      <button id="btn-restart">ЗАНОВО</button>
+    </div>
+
+    <div id="overlay" class="hidden">
+      <div id="overlay-content">
+        <img id="win-img" src="assets/win.png" alt="win" class="hidden">
+        <h2 id="overlay-title">ПОБЕДА!</h2>
+        <p id="overlay-message"></p>
+        <button id="overlay-restart">ИГРАТЬ СНОВА</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
